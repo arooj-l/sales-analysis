@@ -55,3 +55,13 @@ print(category_revenue)
 # Average Price per Product
 average_price = sales_df.groupby("Product")["Price"].mean()
 print(average_price)
+
+# filter transaction where revenue is greater than $30
+high_revenue_sales = sales_df[sales_df["Revenue"] > 30]
+print(high_revenue_sales)
+
+# Sort products by revenue
+sorted_sales = sales_df.sort_values(by= "Revenue", ascending=False)
+print(sorted_sales)
+
+print(sales_df.info())
